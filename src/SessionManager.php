@@ -61,17 +61,7 @@ final class SessionManager implements ArrayAccess, Countable, IteratorAggregate,
      */
     public function count()
     {
-        return $this->countActive();
-    }
-
-    /**
-     * Count the number of active sessions from a key.
-     *
-     * @return int Returns the number of active sessions from a key.
-     */
-    public function countFromKey(string|int $key)
-    {
-        return $this->countActive($key);
+        //
     }
 
     /**
