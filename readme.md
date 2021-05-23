@@ -12,20 +12,11 @@ This session manger also allows array access. So you could use the session manag
 ```php
 <?php
 
-//
-
 $sessionManager['hello'] = 'world'; // Set the session variable.
 if (isset($sessionManager['hello'])) {
     $sessionManager['hey'] = 'tom'; // Set another session variable.
 }
-
-// Print the session variable values.
-print($sessionManager['hello']); // prints `world`.
-print($sessionManager['hey']); // prints `tom`.
-
-// Delete the session variables.
-unset($sessionManager['hello']);
-unset($sessionManager['hey']);
+unset($sessionManager['hey']); // Delete a session variable.
 
 ```
 ## Contributing
