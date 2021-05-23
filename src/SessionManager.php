@@ -207,6 +207,8 @@ final class SessionManager implements ArrayAccess, Countable, IteratorAggregate,
     /**
      * Start or resume a session.
      *
+     * @param array $override A list of config variables to override.
+     *
      * @return bool Returns true on success or false on failure. 
      */
     public function start(array $override = []): bool
