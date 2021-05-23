@@ -8,17 +8,7 @@ composer require lovephpforever/period
 ```
 ## Usage
 ### Array Access
-This session manger also allows array access. So you could use the session manager instance just like an array. Check out the example below.
-```php
-<?php
-
-$sessionManager['hello'] = 'world'; // Set the session variable.
-if (isset($sessionManager['hello'])) {
-    $sessionManager['hey'] = 'tom'; // Set another session variable.
-}
-unset($sessionManager['hey']); // Delete a session variable.
-
-```
+This session manger also allows array access. So you could use the session manager instance just like an array. Check out the example below. The session manager also implements Traversable which means the object can be used in a foreach.
 ## Contributing
 All contributions are welcome! If you wish to contribute.
 ## License
