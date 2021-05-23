@@ -29,7 +29,6 @@ use ArrayAccess;
 use ArrayIterator;
 use Countable;
 use IteratorAggregate;
-use SessionManagerInterface;
 use Traversable;
 
 /**
