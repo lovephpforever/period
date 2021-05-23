@@ -23,7 +23,7 @@
  * SOFTWARE.
  */
 
-namespace LovePHPForever\Session;
+namespace Period;
 
 /**
  * The session manager interface.
