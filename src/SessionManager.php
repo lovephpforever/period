@@ -36,8 +36,6 @@ use Traversable;
  */
 final class SessionManager implements ArrayAccess, Countable, IteratorAggregate, SessionManagerInterface, Traversable
 {
-    use CounterTrait;
-
     /**
      * Construct a new session manager.
      *
