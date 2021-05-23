@@ -7,6 +7,27 @@ The best way to install Period is through [composer](https://getcomposer.org/).
 composer require lovephpforever/period
 ```
 ## Usage
+### Array Access
+This session manger also allows array access. So you could use the session manager instance just like an array. Check out the example below.
+```php
+<?php
+
+//
+
+$sessionManager['hello'] = 'world'; // Set the session variable.
+if (isset($sessionManager['hello'])) {
+    $sessionManager['hey'] = 'tom'; // Set another session variable.
+}
+
+// Print the session variable values.
+print($sessionManager['hello']); // prints `world`.
+print($sessionManager['hey']); // prints `tom`.
+
+// Delete the session variables.
+unset($sessionManager['hello']);
+unset($sessionManager['hey']);
+
+```
 ## Contributing
 All contributions are welcome! If you wish to contribute.
 ## License
