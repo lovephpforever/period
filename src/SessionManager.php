@@ -75,6 +75,18 @@ final class SessionManager implements ArrayAccess, Countable, IteratorAggregate,
     }
 
     /**
+     * Delete a key.
+     *
+     * @param string|int $key The key to delete.
+     *
+     * @return void No value is returned.
+     */
+    public function delete(string|int $key): void
+    {
+        unset($_SESSION[$key]);
+    }
+
+    /**
      * Check to see if a session exists.
      *
      * @return bool Returns true on a active session and false if not.
