@@ -23,7 +23,7 @@
  * SOFTWARE.
  */
 
-namespace LovePHPForever\Session;
+namespace Period;
 
 use ArrayAccess;
 use ArrayIterator;
