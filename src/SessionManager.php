@@ -34,7 +34,7 @@ use Traversable;
 /**
  * The session manager.
  */
-final class SessionManager implements ArrayAccess, Countable, IteratorAggregate, SessionManagerInterface, Traversable
+final class SessionManager implements ArrayAccess, IteratorAggregate, SessionManagerInterface, Traversable
 {
     /**
      * Construct a new session manager.
@@ -50,16 +50,6 @@ final class SessionManager implements ArrayAccess, Countable, IteratorAggregate,
             session_name($sessionName);
         }
         $autostart ? $this->start() : null;
-    }
-
-    /**
-     * Count the number of active sessions.
-     *
-     * @return int Returns the number of active sessions.
-     */
-    public function count()
-    {
-        //
     }
 
     /**
