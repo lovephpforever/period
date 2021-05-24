@@ -95,9 +95,9 @@ final class SessionManager implements ArrayAccess, Countable, IteratorAggregate,
      *
      * @return mixed Can return all value types.
      */
-    public function flash(string|int $key, mixed $defualtValue = null): mixed
+    public function flash(string|int $key, mixed $defaultValue = null): mixed
     {
-        $value = $this->has($key, $defualtValue);
+        $value = $this->has($key, $defaultValue);
         $this->delete($key);
         return $value;
     }
@@ -110,7 +110,7 @@ final class SessionManager implements ArrayAccess, Countable, IteratorAggregate,
      *
      * @return mixed Can return all value types.
      */
-    public function get(string|int $key, mixed $defualtValue = null): mixed
+    public function get(string|int $key, mixed $defaultValue = null): mixed
     {
         return $this->has($key) ? $_SESSION[$key] : $defualtValue;
     }
@@ -211,8 +211,15 @@ final class SessionManager implements ArrayAccess, Countable, IteratorAggregate,
      *
      * @return bool Returns true on success or false on failure. 
      */
-    public function start(array $override = []): bool
-    {
+    public function start(array $override = [
+        'cookie_httponly'  => true,
+        'cookie_samesite'  => "Lax",
+        'cookie_secure'    => true,
+        'use_cookies'      => true,
+        'use_only_cookies' => true,
+        'use_strict_mode'  => true,
+        'use_trans_sid'    => false,
+    ]): bool {
         return session_start($override);
     }
 
