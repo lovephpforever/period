@@ -27,7 +27,6 @@ namespace Period;
 
 use ArrayAccess;
 use ArrayIterator;
-use Countable;
 use IteratorAggregate;
 use Traversable;
 
